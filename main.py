@@ -1,11 +1,12 @@
 
 def main():
     from stats import get_num_words
-    from stats import get_num_characters
+    from stats import make_pretty
     num_words  = get_num_words()
-    num_characters = get_num_characters()
-    print(f"{num_words} words found in the document")
-    print(num_characters)
+    prett_list = make_pretty()
+    print(f"Found {num_words} total words")
+    for items in prett_list:
+        print(items)
 
 if __name__ == "__main__":
     main()
